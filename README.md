@@ -1,4 +1,10 @@
 # PDF-to-RMD Converter
+[![GitHub](https://img.shields.io/github/license/facebookresearch/nougat)](https://github.com/facebookresearch/nougat)
+[![PyPI](https://img.shields.io/pypi/v/nougat-ocr?logo=pypi)](https://pypi.org/project/nougat-ocr)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/release/python-390/)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Hugging Face Spaces](https://img.shields.io/badge/🤗%20Hugging%20Face-Community%20Space-blue)](https://huggingface.co/spaces/ysharma/nougat)
+
 
 PDF-to-RMD Converter — это инструмент для автоматического перевода научных текстов с формулами из PDF в R Markdown (RMD). Проект предназначен для ученых, исследователей и специалистов, работающих с технической документацией и математическими формулами.
 
