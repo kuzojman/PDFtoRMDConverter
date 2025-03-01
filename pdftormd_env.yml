@@ -26,7 +26,6 @@ dependencies:
     - seaborn==0.11.1
     - sqlalchemy==1.4.15
     - statsmodels==0.13.2
-    - fastapi==0.115.6
     - jiwer==3.0.5
     - optimum==1.23.3
     - pdf2image==1.17.0
