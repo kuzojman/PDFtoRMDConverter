@@ -6,7 +6,7 @@ import sys
 
 
 class pdf2rmdconverter:
-    def convert(paths: list, out_path="./result/"):
+    def convert(paths: list):
         '''
             функция собирает результаты работы моделей
             отрабатывающих в функции get_text_detection
@@ -16,6 +16,7 @@ class pdf2rmdconverter:
         os.makedirs('result', exist_ok=True)
         os.makedirs('pictures', exist_ok=True)
         for path in paths:
+            out_path="./result/"
             df = construct_df.get_text_detection(path)
             df = df.sort_values(by=['y_mean'])
             df = df.reset_index(drop=True)
@@ -38,7 +39,7 @@ class pdf2rmdconverter:
                 for _, group in grouped
             )
                 
-            out_path = f"{out_path}{os.path.basename(path)}.rmd"
+            out_path = f"{out_path}{os.path.splitext(os.path.basename(path))[0]}.rmd"
             with open(out_path, "w") as file:
                 file.write(markdown_content)
         return 
