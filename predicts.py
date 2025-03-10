@@ -29,7 +29,12 @@ class construct_df:
             img = img_path
             
         results = models.predict_yolo(img)
-        
+        print(results)
+        try:
+            if results[1] == 'error 0':
+                return results[1]
+        except IndexError:
+            pass
         print(len(results[0].boxes))
         result = results[0]
         df = pd.DataFrame(columns=['image', 'label', 'x1', 'y1', 'x2', 'y2', 'detected'])

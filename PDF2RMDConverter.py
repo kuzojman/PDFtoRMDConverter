@@ -13,11 +13,18 @@ class pdf2rmdconverter:
             и сортирует их в правильном порядке по координатам
             и собирает в markdown файл
         '''
+        print(type(paths))
         os.makedirs('result', exist_ok=True)
         os.makedirs('pictures', exist_ok=True)
         for path in paths:
             out_path="./result/"
             df = construct_df.get_text_detection(path)
+            print(type(df))
+            try:
+                if df == 'error 0':
+                    continue
+            except ValueError:
+                pass
             df = df.sort_values(by=['y_mean'])
             df = df.reset_index(drop=True)
 

@@ -45,5 +45,6 @@ class models:
 
 
     def predict_yolo(img):
-        return config.yolo.predict(img, save_txt=False)        
-
+        try:
+           return config.yolo.predict(img, save_txt=False)
+        except: return(f"нет файла с таким именим в данной директории: {img}"), 'error 0'
