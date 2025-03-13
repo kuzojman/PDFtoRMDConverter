@@ -25,6 +25,8 @@ PDF-to-RMD Converter — это инструмент для автоматиче
 git clone https://github.com/kuzojman/PDFtoRMDConverter
 ```
 Необходимо установить CUDA 12.1 https://developer.nvidia.com/cuda-12-1-0-download-archive
+Установите tesseract OCR по этой ссылке https://github.com/UB-Mannheim/tesseract/wiki
+Установите Poppler https://poppler.freedesktop.org
 
 Для работы инструмента необходимо использовать виртуальное окружение Python:  
 Установите Anaconda с офицального сайта https://www.anaconda.com/download  
@@ -33,6 +35,7 @@ git clone https://github.com/kuzojman/PDFtoRMDConverter
 ```text
 cd PDFtoRMDConverter
 ```
+## создание окружение с помощью yml
 введите команду для создания окружения с зависимостями:
 ```text
 conda env create -f pdftormd_env.yml
@@ -45,13 +48,16 @@ conda activate pdftormd
 ```text
 pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 ```
-Если при использовании инструмента возникнет ошибка, попробуйте установить другую версию torch:
+## создание окружения с помощью requirements
+создайте окружение
 ```text
-pip uninstall torch torchvision torchaudio
-pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+conda create -n <имя окружения> python=3.10.15
 ```
-Установите tesseract OCR по этой ссылке https://github.com/UB-Mannheim/tesseract/wiki
-Также убедитесь, что установлен Poppler — инструмент для обработки PDF.  
+загрузите зависимости
+```text
+pip install -r requirements.txt
+```
+
 # Использование инструмента
 В командной строке Anaconda prompt активировать окружение если еще не активировано:
 ```text
