@@ -1,0 +1,23 @@
+matplotlib==3.9.2
+nltk==3.6.1
+numpy==1.26.3
+pandas==2.2.3
+plotly==5.4.0
+scipy
+seaborn==0.11.1
+sqlalchemy==1.4.15
+statsmodels==0.13.2
+jiwer==3.0.5
+pdf2image==1.17.0
+pytesseract==0.3.13
+texify==0.2.1
+transformers==4.46.2
+ultralytics==8.3.31
+uvicorn
+onnx==1.17.0
+python-multipart==0.0.20
+
+--find-links https://download.pytorch.org/whl/cu121
+
+torch==2.5.1
+optimum==1.23.3
